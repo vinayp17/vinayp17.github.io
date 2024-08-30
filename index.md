@@ -57,30 +57,28 @@ We have considered a diverse set of datasets for our time series classification 
 - **PenDigits**: Handwritten digit data with multiple features.
 - **HandOutlines**: Outlines of hand shapes.
 
-## Data Generation
+### Results
 
-To generate data for a specific datasource, follow these steps:
+| Dataset                   | Scenario                                | Accuracy |
+|---------------------------|-----------------------------------------|----------|
+| CinCECGTorso              | BASELINE_4096                           | 98.3     |
+| CinCECGTorso              | BASELINE_2048_adaptive_ds_plot_ds       | 82.7     |
+| CinCECGTorso              | BASELINE_2048                           | 76.4     |
+| TwoLeadECG                | BASELINE_2048                           | 99.1     |
+| ItalyPowerDemand          | BASELINE_2048                           | 90       |
+| FreezerSmallTrain         | BASELINE_4096                           | 98.78    |
+| FreezerSmallTrain         | BASELINE_2048                           | 97.39    |
+| PenDigits                 | BASELINE_4096                           | 85.08    |
+| PenDigits                 | BASELINE_2048                           | 72.89    |
+| PhalangesOutlinesCorrect  | BASELINE_2048                           | 68.79    |
+| HandOutlines              | BASELINE_4096                           | 66.7     |
+| HandOutlines              | BASELINE_2048                           | 66.7     |
 
-1. Edit the `configs/llava_config.yaml` file to specify the appropriate dataset, downsampling, and rounding parameters.
-2. Run the following command:
-   ```sh
-   python dataset.py configs/llava_config.yaml```
-
-## Steps to Fine-tune Llava
-
-1. **Data Preparation:**
-   - Gather and preprocess your time series data.
-2. **Model Configuration:**
-   - Configure Llava for your specific task.
-3. **Training:**
-   - Train the model with your data.
-4. **Evaluation:**
-   - Evaluate the model's performance.
 
 ## Resources
 
-- [Llava Documentation](https://llava-docs.example.com)
-- [Time Series Classification Tutorial](https://time-series-tutorial.example.com)
+- [Llava Documentation](https://llava-vl.github.io)
+- [Time Series Classification Data](https://www.timeseriesclassification.com)
 
 ## Conclusion
 
